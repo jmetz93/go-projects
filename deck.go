@@ -25,7 +25,11 @@ func newDeck() deck {
 // first receiver function (d refers to instance of deck, deck ties it to deck type)
 // go best practice to refer to receiver as 1 letter variable name
 func (d deck) print() { // receiver function for a deck, d refers to the deck
-	for _, card := range d {
-		fmt.Println(card)
+	for i, card := range d {
+		fmt.Println(i, card)
 	}
+}
+
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
 }
