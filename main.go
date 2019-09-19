@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	cards := []string{newCard(), newCard()} // in between curly braces are the elements in the array/slice
-	cards = append(cards, "Six of Spades")  // adding element to end of array
+	cards := deck{newCard(), newCard()}    // in between curly braces are the elements in the array/slice
+	cards = append(cards, "Six of Spades") // adding element to end of array
 
 	for i, card := range cards {
 		fmt.Println(i, card)
