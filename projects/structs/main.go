@@ -10,5 +10,8 @@ type person struct {
 func main() {
 	// jacob := person{"Jacob", "Metzinger"} // one method of declaring structs, assigns values based on order
 	jacob := person{firstName: "Jacob", lastName: "Metzinger"}
-	fmt.Println(jacob)
+	// var jacob person // creates struct with empty property values, in case of person struct each prop will be empty string
+	// fmt.Println(jacob)
+	fmt.Printf("%+v", jacob) // logs struct with property names and values
+
 }
