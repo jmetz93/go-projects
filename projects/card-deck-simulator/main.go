@@ -7,6 +7,7 @@ func main() {
 	// cards = append(cards, "Six of Spades") // adding element to end of array
 	cards := newDeck()
 	fmt.Println(cards.toString())
+	cards.saveToFile("my_cards") // save deck to a file named "my_cards"
 	// for i, card := range cards {
 	// 	fmt.Println(i, card)
 	// }
