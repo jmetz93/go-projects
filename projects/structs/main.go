@@ -29,8 +29,8 @@ func main() {
 			zipCode: 94000,
 		},
 	}
-	jimPointer := &jim // creating pointer to memory address of struct
-	jimPointer.updateFirstName("Jacob")
+	// jimPointer := &jim // creating pointer to memory address of struct
+	jim.updateFirstName("Jacob")
 	jim.print()
 }
 
@@ -40,5 +40,6 @@ func (p person) print() {
 
 // *person ensures to use the memory address of the pointer
 func (pointerToPerson *person) updateFirstName(newFirstName string) {
+	// (*) says to grab actual struct from memory
 	(*pointerToPerson).firstName = newFirstName
 }
